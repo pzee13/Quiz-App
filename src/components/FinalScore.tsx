@@ -1,3 +1,4 @@
+// src/components/Score.tsx
 import React from 'react';
 
 interface ScoreProps {
@@ -5,7 +6,11 @@ interface ScoreProps {
 }
 
 const Score: React.FC<ScoreProps> = ({ score }) => {
-  return <p className="text-xl mb-4">Score: {score}</p>;
+  return (
+    <div className="text-center mb-6">
+      <p className="text-2xl font-bold text-gray-800">Score: {score}</p>
+    </div>
+  );
 };
 
 export default Score;

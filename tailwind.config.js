@@ -4,7 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primaryBlack': '#18181B', // Define your custom color here
+        'primaryBlack': '#18181B',
+        'optionColor':'#3F3F46' 
+      },
+      dropShadow: {
+        'white-xl': '0 4px 8px rgba(255, 255, 255, 0.5)', // Custom white drop shadow
       },
     },
   },

@@ -1,3 +1,4 @@
+// src/components/Timer.tsx
 import React from 'react';
 
 interface TimerProps {
@@ -5,7 +6,11 @@ interface TimerProps {
 }
 
 const Timer: React.FC<TimerProps> = ({ timer }) => {
-  return <div className="mb-4">Timer: {timer}s</div>;
+  return (
+    <div className="text-xl font-semibold text-white">
+      Time Left: <span className='text-2xl font-bold text-red-500'>{timer}</span> seconds
+    </div>
+  );
 };
 
 export default Timer;

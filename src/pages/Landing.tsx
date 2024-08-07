@@ -4,10 +4,10 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setUserDetails } from '../slice/userSlice';
 
-
 const Landing: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [username, setUsername] = useState('');
+  const [error, setError] = useState<string | null>(null);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -17,17 +17,17 @@ const Landing: React.FC = () => {
 
   const handleModalSubmit = () => {
     if (!username) {
-      alert('Please enter your name.');
+      setError('Please enter your name.');
       return;
     }
 
-    dispatch(setUserDetails({ username })); 
-    navigate('/quiz')
-    setShowModal(false); 
+    dispatch(setUserDetails({ username }));
+    navigate('/quiz');
+    setShowModal(false);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 overflow-hidden">
       <h1 className="text-4xl font-bold mb-6">Welcome to the Quiz App</h1>
       <button
         onClick={handlePlay}
@@ -47,6 +47,9 @@ const Landing: React.FC = () => {
               className="w-full px-3 py-2 border rounded-md mb-4"
               placeholder="Name"
             />
+            {error && (
+              <p className="text-red-500 mb-4">{error}</p>
+            )}
             <div className="flex justify-end">
               <button
                 onClick={handleModalSubmit}

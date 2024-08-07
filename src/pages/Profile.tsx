@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../app/store';
 
 const UserProfile: React.FC = () => {
-  const { username } = useSelector((state: RootState) => state.user); 
+  const { username } = useSelector((state: RootState) => state.user);
   const initials = username
     ? username
         .split(' ')

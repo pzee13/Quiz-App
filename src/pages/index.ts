@@ -6,4 +6,5 @@ export { default as Answers } from '../components/Answers';
 export { default as NextButton } from '../components/NextButton';
 export { default as PlayButton } from '../components/PlayButton';
 export { default as TimeUpModal } from '../components/TimeUpModal';
+export { default as Anime1 } from '../assets/images/Anime1.gif'
 

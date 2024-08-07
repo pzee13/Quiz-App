@@ -8,8 +8,10 @@ const TimeUpModal: React.FC<TimeUpModalProps> = ({ show }) => {
   if (!show) return null;
 
   return (
-    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded shadow-lg">
-      <p>Time's up!</p>
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+      <div className="bg-gray-800 text-white px-6 py-4 rounded-lg shadow-lg transform scale-90 transition-transform duration-300 ease-in-out">
+        <p className="text-lg font-semibold">Time's up!</p>
+      </div>
     </div>
   );
 };
