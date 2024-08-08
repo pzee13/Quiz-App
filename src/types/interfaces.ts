@@ -1,5 +1,10 @@
 
 
+export interface RoootState {
+  user: UserState;
+  quiz: QuizState;
+}
+
 export interface Question {
   question: string;
   options: string[];
@@ -11,6 +16,8 @@ export interface QuizState {
   currentQuestionIndex: number;
   timer: number;
   questions: Question[];
+  
+ 
 }
 
 

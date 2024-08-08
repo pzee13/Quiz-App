@@ -20,12 +20,12 @@ const Answers: React.FC<AnswersProps> = ({
           <button
             key={option}
             onClick={() => handleAnswerChange(option)}
-            className={`w-40 h-20 text-center  px-2 py-1 rounded text-white
+            className={`w-36 h-16 md:w-40 md:h-20 text-center px-2 py-1 rounded text-white
                 border-2
-                                    border-gray-500
-                                    hover:bg-optionColor
-                                    hover:text-black
-                                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition-transform duration-300 ease-in-out transform ${
+                border-gray-500
+                hover:bg-optionColor
+                hover:text-black
+                focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition-transform duration-300 ease-in-out transform ${
               selectedAnswer === option
                 ? 'bg-yellow-700 scale-105'
                 : 'hover:bg-blue-600'

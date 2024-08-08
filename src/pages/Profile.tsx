@@ -1,25 +1,18 @@
-// src/components/UserProfile.tsx
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../app/store';
 
 const UserProfile: React.FC = () => {
-  const { username } = useSelector((state: RootState) => state.user);
-  const initials = username
-    ? username
-        .split(' ')
-        .map((name) => name[0])
-        .join('')
-        .toUpperCase()
-    : '';
+  const  username = "Profile"
+
+  const initials = "P"
+    
 
   return (
-    <div className="flex items-center">
-      <div className="bg-blue-500 z-10 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+    <div className="flex items-center space-x-2">
+      <div className="bg-blue-500 z-10 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
         {initials}
       </div>
       <div>
-        <p className="font-bold text-black">{username}</p>
+        <p className="text-sm md:text-base font-bold text-white">{username}</p>
       </div>
     </div>
   );

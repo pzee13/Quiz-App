@@ -1,4 +1,4 @@
-// src/data/data.ts
+
 
 import { Question } from '../types/interfaces';
 

@@ -1,5 +1,3 @@
-// NextButton.tsx
-
 import React from 'react';
 
 interface NextButtonProps {

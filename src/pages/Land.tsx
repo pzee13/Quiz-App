@@ -1,39 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useDispatch } from 'react-redux';
+
 import { useNavigate } from 'react-router-dom';
-import { setUserDetails } from '../slice/userSlice';
+
 import quizimage from '../assets/images/quizimage.png';
 import quizImage2 from '../assets/images/quizImage2.png';
 
-const ComponentName: React.FC = () => {
+const LandingPage: React.FC = () => {
     const [flipped, setFlipped] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-    const [username, setUsername] = useState('');
-    const [error, setError] = useState<string | null>(null);
-    const dispatch = useDispatch();
+
+
     const navigate = useNavigate();
   
     const handlePlay = () => {
-      setShowModal(true);
-    };
-  
-    const handleModalSubmit = () => {
-      if (!username) {
-        setError('Please enter your name.');
-        return;
-      }
-  
-      dispatch(setUserDetails({ username }));
+     
       navigate('/quiz');
-      setShowModal(false);
     };
   
+ 
 
     useEffect(() => {
         const interval = setInterval(() => {
             setFlipped(prev => !prev);
-        }, 3000); // Adjust interval to match flip animation duration (600ms * 2)
+        }, 3000); 
 
         return () => clearInterval(interval);
     }, []);
@@ -111,31 +100,7 @@ const ComponentName: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
-          <div className="bg-white p-6 rounded shadow-md w-full max-w-sm">
-            <h2 className="text-2xl font-bold mb-4">Enter Your Name</h2>
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md mb-4"
-              placeholder="Name"
-            />
-             {error && (
-              <p className="text-red-500 mb-4">{error}</p>
-            )}
-            <div className="flex justify-end">
-              <button
-                onClick={handleModalSubmit}
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+            
             </div>
 
            
@@ -144,4 +109,4 @@ const ComponentName: React.FC = () => {
     );
 }
 
-export default ComponentName;
+export default LandingPage;
