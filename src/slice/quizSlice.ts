@@ -2,13 +2,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { QuizState } from '../types/interfaces';
 import { questions } from '../data/quizData';
 
-// Utility function to get data from localStorage
+
 const getQuizStateFromLocalStorage = (): QuizState | null => {
   const quizState = localStorage.getItem('quizState');
   return quizState ? JSON.parse(quizState) : null;
 };
 
-// Initialize the state
+
 const initialState: QuizState = getQuizStateFromLocalStorage() || {
   score: 0,
   currentQuestionIndex: 0,

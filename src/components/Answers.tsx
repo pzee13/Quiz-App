@@ -22,15 +22,15 @@ const Answers: React.FC<AnswersProps> = ({
             onClick={() => handleAnswerChange(option)}
             className={`w-36 h-16 md:w-40 md:h-20 text-center px-2 py-1 rounded text-white
                 border-2
-                border-gray-500
+            
                 hover:bg-optionColor
                 hover:text-black
-                focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition-transform duration-300 ease-in-out transform ${
+                focus:outline-none transition-transform duration-300 ease-in-out transform ${
               selectedAnswer === option
                 ? 'bg-yellow-700 scale-105'
-                : 'hover:bg-blue-600'
+                : 'hover:bg-blue-600 border-yellow-200'
             }`}
-            disabled={isTimeUp} // Disable answer buttons when time is up
+            disabled={isTimeUp} 
           >
             {option}
           </button>
