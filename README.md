@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+Quiz Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple Quiz Web App built using React, TypeScript, and Vite. It features a timer-based quiz where users can answer questions within a set time limit, view their scores, and restart the quiz as needed. The project is set up with minimal configuration and includes ESLint for code quality assurance.
 
-Currently, two official plugins are available:
+Project Overview:
+This Quiz Web App demonstrates core front-end development skills including:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React with TypeScript for a strongly-typed, component-based architecture.
+State management using Redux 
+Responsive design using Tailwind CSS for adaptability across different screen sizes.
 
-## Expanding the ESLint configuration
+Features
+4 multiple-choice options per question, with one correct answer.
+A 5-second timer for each question.
+Feedback after each question, with a 5-second display before moving to the next question.
+Final score display and a "Play Again" option.
+Responsive design for desktop and mobile devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+React: A JavaScript library for building user interfaces.
+TypeScript: A statically typed superset of JavaScript.
+Vite: A next-generation front-end tool for blazing-fast development.
+ESLint: A tool for identifying and fixing problems in JavaScript code.
+Tailwind CSS: For styling and responsive design.
